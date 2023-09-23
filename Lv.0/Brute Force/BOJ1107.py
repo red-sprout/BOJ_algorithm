@@ -2,7 +2,10 @@ MAX = 1000001
 
 N = int(input())
 M = int(input())
-malf = list(map(int, input().split()))
+if M:
+    malf = list(map(int, input().split()))
+else:
+    malf = []
 
 m = abs(N - 100)
 ans = m
