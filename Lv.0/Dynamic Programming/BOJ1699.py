@@ -1,1 +1,9 @@
-#진행
+N = int(input())
+arr = [i for i in range(N + 1)]
+for i in range(1, N + 1):
+    for j in range(1, i):
+        if j*j > i:
+            break
+        if arr[i] > arr[i - j * j] + 1:
+            arr[i] = arr[i - j * j] + 1
+print(arr[N])
