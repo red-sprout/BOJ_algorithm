@@ -1,6 +1,19 @@
+#진행중
 N = int(input())
-T, P = [], []
+TP = []
 for _ in range(N):
-    te, pe = map(int,input().split())
-    T.append(te)
-    P.append(pe)
+    tmp = list(map(int,input().split()))
+    TP.append(tmp)
+
+price = 0
+def dfs(idx):
+    global price
+    tmp = 0
+    for i in range(idx, N):
+        idx = i + TP[i][0]
+        if idx > N:
+            continue
+        tmp = max(tmp, TP[i][0])
+    return price
+
+print(dfs(0))
