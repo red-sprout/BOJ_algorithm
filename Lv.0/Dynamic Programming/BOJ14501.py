@@ -1,4 +1,6 @@
 N = int(input())
-TP = []
+T, P = [], []
 for _ in range(N):
-    TP.append(list(map,int,input().split()))
+    te, pe = map(int,input().split())
+    T.append(te)
+    P.append(pe)
