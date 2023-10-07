@@ -1,4 +1,3 @@
-#수정중
 L, C = map(int,input().split())
 arr = list(input().split())
 arr.sort()
@@ -13,12 +12,12 @@ def dfs(idx):
             if i in cand:
                 n += 1
         if (n > 0) & (L - n >= 2):
-            print(*cand)
+            print(''.join(cand))
         return
     for i in range(idx, C):
         idx = i
         cand.append(arr[idx])
         dfs(idx + 1)
-        cand.pop()
+        cand.pop()         
 
 dfs(0)
